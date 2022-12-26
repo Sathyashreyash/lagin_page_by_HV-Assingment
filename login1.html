@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login Page HTML & CSS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url(./img/Background1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        form {
+            border: 3px solid greenyellow;
+            width: 50%;
+            height: 85vh;
+            margin: 50px auto;
+            box-shadow: 4px 3px 15px red;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0,);
+            color: white;
+        }
+
+        input {
+            padding: 10px;
+            margin: 20px;
+            width: 50%;
+            margin-left: 30%;
+            border: none;
+            text-align: center;
+            outline: none;
+            /* display: flex; */
+            border-radius: 20px;
+            background-color: orange;
+            border: 2px solid red;
+            opacity: 0.7;
+        }
+
+        input:hover {
+            background-color: beige;
+            box-shadow: 5px 5px 50px red;
+            border: 2px solid blue;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            padding: 20px;
+            margin: 10px 5px;
+            /* background-color: beige; */
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 22%;
+            /* color: blue; */
+        }
+
+        button {
+            text-align: center;
+            width: 20%;
+            margin: 10% !important;
+            height: 50xp;
+            padding: 5px;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 20px;
+            background-color: aquamarine;
+            border: 2px outset red;
+        }
+
+        button:hover {
+            background-color: greenyellow;
+            box-shadow: 5px 5px 25px red;
+        }
+
+        .spinner {
+            height: 20px;
+            width: 20px;
+            border-top: none;
+            border-radius: 50%;
+            border: 2px solid white;
+            margin-left: 185px;
+            animation: spin 1s linear infinite;
+        }
+
+        /* #login {
+            text-align: center;
+        } */
+
+        #tag {
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            height: 120px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        #sign-in:hover+#tag {
+            opacity: 1;
+        }
+
+        #login {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p {
+            width: 100px;
+            padding-bottom: 120px;
+            margin-bottom: 110px;
+            margin-left: 150px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+        
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <h1>Login here!</h1><br>
+        <label> <i class="fa fa-user-circle" aria-hidden="true"></i> Username</label><br>
+        <input type="name" name="name" placeholder="Enter your username">
+        <label for="">Email ID</label>
+        <input type="text" name="" placeholder="Enter your email">
+        <label><i class="fa fas fa-lock" aria-hidden="true"></i> Password</label>
+        <input type="text" name="" placeholder="Enter your password">
+        <div id="login">
+            <button id="sign-in">Sign in</button>
+            <div id="tag">
+                <div class="spinner"></div>
+                <p>waiting for network...</p>
+            </div>
+        </div>
+
+    </form>
+
+</body>
+
+</html>
